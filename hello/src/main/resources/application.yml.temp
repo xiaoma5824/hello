@@ -1,0 +1,12 @@
+#端口随机,用微服务不需要记住IP与端口，默认是8080，这样多个服务就会有冲突了
+#server.port=${random.int[1024,9999]}
+#修改端口
+server:
+  port: 8080
+#自定义发生
+agan:
+  msg: hi,hello Spring ${agan.hello} ${agan.number}
+#配置变量引用
+  hello: "配置变量引用"
+#随机值配置
+  number: ${random.int}
